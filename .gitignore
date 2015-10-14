@@ -1,3 +1,7 @@
+node_modules
+public/bower_components
+config.js
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

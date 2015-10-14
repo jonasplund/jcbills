@@ -1,0 +1,45 @@
+html {
+    font-family: verdana;
+    font-size: 11px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#form {
+    background-color: #EEE;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+form label {
+    display: inline-block;
+    width: 200px;
+}
+div.input {
+    height: 40px;
+}
+
+#bills {
+    width: 100%;
+    margin-top: 10px;
+}
+#bills th {
+    background-color: #111;
+    color: #EEE;
+    padding: 4px;
+}
+#bills tr {
+    transition: background-color 0.3s;
+}
+#bills tr:nth-child(2n) {
+    background-color: #CCC;
+}
+#bills tr.updated {
+    background: #383;
+}
+
+#bills td {
+    padding: 4px;
+}

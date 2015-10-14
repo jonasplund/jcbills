@@ -1,0 +1,39 @@
+/* global process */
+var config = {};
+
+config.web = {};
+config.db = {};
+config.app = {};
+
+config.web.host = 'http://www.yoursite.com'; // Used to create link in mail.
+config.web.port = process.env.WEB_PORT || 4444;
+
+config.db.host = 'mongodb://localhost/jcbills';
+config.db.name = 'jcbills';
+
+config.app.users = [
+    {
+        username: 'jon',
+        firstname: 'Jon',
+        lastname: 'Asplund',
+        password: 'password1'
+    }, {
+        username: 'username2',
+        firstname: 'firstname2',
+        lastname: 'lastname2',
+        password: 'password2'
+    }
+];
+
+config.email = {
+	from: {
+        user: 'jon.asplund@gmail.com',
+        pass: 'xxxxxxxxxxxxx' // If using gmail, create app specific password.
+    },
+	to: [
+		'jon.asplund@gmail.com', // Each time a new bill is created a mail 
+        'user2@gmail.com'        // will be sent to the addresses defined here.
+	]
+}
+
+module.exports = config;

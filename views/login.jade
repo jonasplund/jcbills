@@ -1,0 +1,17 @@
+html5
+html
+    head
+        title= "Log In"
+        link(rel='stylesheet', href='/login.css')
+        script(src='/bower_components/jquery/dist/jquery.min.js', type='text/javascript', defer='defer')
+    body
+        if invalid
+            .error Please enter a valid username and password.
+        form(method='post', action='/login', enctype='application/x-www-form-urlencoded')
+            input#username(name='username', placeholder='Username')
+            br
+            input#password(type='password', name='password', placeholder='Password')
+            br
+            input(type='submit', value='Log in')
+            br
+            input(type='hidden', name='redirect', id='redirect')

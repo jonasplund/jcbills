@@ -1,0 +1,46 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title JCBills
+        link(rel='stylesheet', type='text/css', href='styles.css')
+        script(src='bower_components/jquery/dist/jquery.min.js', type='text/javascript')
+        script(src='app.js', type='text/javascript')
+    body
+        form(id='form', method='post', action='api/bill')
+            h3 Create bill
+            div.input
+                label(for='id') ID
+                input(name='id', id='id', type='text', disabled)
+            div.input
+                label(for='received') Received date
+                input(name='received', id='received', type='date')
+            div.input
+                label(for='received') Amount
+                input(name='amount', id='amount', type='number')
+            div.input
+                label(for='due') Due date
+                input(name='due', id='due', type='date')
+            div.input
+                label(for='recipient') Recipient
+                input(name='recipient', id='recipient', type='text')
+            div.input
+                label(for='info') Info
+                input(name='info', id='info' , type='text')
+            div.input
+                label(for='jmessage') Jon message
+                input(name='jmessage', id='jmessage' , type='text', maxlength='10')
+            div.input
+                label(for='bmessage') Birgit message
+                input(name='bmessage', id='bmessage' , type='text', maxlength='10')
+            input(type='submit', id='submit')
+        table#bills
+            tr
+                th Recipient
+                th Amount
+                th Due date
+                th Info
+                th Received date
+                th Transferred funds
+                th Messages
+                th 
