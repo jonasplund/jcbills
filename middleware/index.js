@@ -20,7 +20,7 @@ var middleware = function (app) {
 
     app.use(session({ 
         store: new MongoStore({ db: config.db.name }),
-        secret: 'zU92£)k!!€',
+        secret: config.app.sessionSecret,
         resave: false,
         saveUninitialized: true
     }));

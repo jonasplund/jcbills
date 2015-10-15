@@ -24,6 +24,7 @@ config.app.users = [
         password: 'password2'
     }
 ];
+config.app.sessionSecret = 'randomString';
 
 config.email = {
 	from: {
