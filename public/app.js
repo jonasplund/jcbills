@@ -34,9 +34,9 @@ $(document).ready(function () {
             var data = this.data;
             var sendData = { _id: data._id };
             if (jon) {
-                sendData.jpaid = this.checked;
+                sendData.jpaid = e.target.checked;
             } else {
-                sendData.bpaid = this.checked;
+                sendData.bpaid = e.target.checked;
             }
             $.ajax({
                 type: 'PUT',
