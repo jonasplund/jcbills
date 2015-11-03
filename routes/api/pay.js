@@ -2,7 +2,6 @@ var Bill = require('mongoose').model('Bill');
 
 module.exports = function (router) {
     router.put('/pay', function (req, res, next) {
-        console.log(req.body);
         Bill.findById(req.body._id, function (err, bill) {
             if (err) {
                 return res.send('Error when locating bill.');
