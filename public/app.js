@@ -15,7 +15,7 @@ $(document).ready(function () {
             jcb.attr('checked', !!this.data.jpaid);
             bcb.attr('checked', this.data.bpaid);
             this.row.append('<td>' + this.data.recipient + '</td>').
-                append('<td>' + this.data.amount + ' (' + (this.data.amount / 2) + ' per person)</td>').
+                append('<td>' + dotToComma(this.data.amount) + ' (' + dotToComma(this.data.amount / 2) + ' per person)</td>').
                 append('<td>' + this.data.dueDate.toDateString() + '</td>').
                 append('<td>' + this.data.info + '</td>').
                 append('<td>' + this.data.dueDate.toDateString() + '</td>').
@@ -27,6 +27,10 @@ $(document).ready(function () {
             this.row.on('click', 'button.editButton', $.proxy(editHandler, this));
             this.row.on('click', 'button.delButton', $.proxy(deleteHandler, this));
         };
+
+        var dotToComma = function (amount) {
+            return amount.toString().replace('.', ',');
+        }
         
         var cbClickHandler = function (e) {
             var self = this;
